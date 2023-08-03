@@ -49,7 +49,11 @@ flex-direction: column;
 }
 
 .header-main {
-    background-color: pink;
+    background-color: transparent;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
 }
 
 .header__inner {
@@ -61,6 +65,7 @@ flex-direction: column;
     display: flex;
     gap: 220px;
     justify-content: space-between;
+    font-size: 26px;
 }
 
 .menu__list-link {
@@ -133,8 +138,12 @@ padding-top: 20px;
 .top {
     color: blueviolet;
     text-align: center;
-    padding-top: 105px;
+    padding-top: 250px;
     padding-bottom: 50px;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
 }
 
 .title {
@@ -153,4 +162,32 @@ padding-top: 20px;
     text-transform: uppercase;
     font-size: 36px;
     font-weight: 700;
+}
+
+.swiper-wrapper {
+    background: rgba(21, 21, 21, .7);
+}
+
+.swiper-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom, center;
+    height: 100vh;
+}
+
+.swiper-pagination-bullet {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 15px;
+}
+
+.swiper-pagination-bullet-active {
+    height: 6px;
+    background-color: white;
 }

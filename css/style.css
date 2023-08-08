@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
     box-sizing: border-box;
 }
@@ -190,4 +191,198 @@ padding-top: 20px;
 .swiper-pagination-bullet-active {
     height: 6px;
     background-color: white;
+=======
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lumanosimo', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+.container {
+    /* background-color: pink; */
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+ul {
+    list-style-type: none;
+    /* max-width: 180px; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+min-height: 100%;
+display: flex;
+flex-direction: column;
+
+}
+
+.header {
+    background-color: pink;
+}
+
+.header-main {
+    background-color: transparent;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+}
+
+.header__inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.menu__list {
+    display: flex;
+    gap: 220px;
+    justify-content: space-between;
+    font-size: 26px;
+}
+
+.menu__list-link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer{
+    background-color: pink;
+    padding: 50px 0 32px;
+    color: white;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.footer__menu-list {
+    max-width: 250px;
+}
+
+.footer__menu-title {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.footer__menu-item + .footer__menu-item {
+padding-top: 20px;
+}
+
+.mess {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.mess__links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 20px;
+}
+
+.mess__item-img {
+    height: 80px;
+    width: 80px;
+}
+
+.footer__copy {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.copy__nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.top {
+    color: blueviolet;
+    text-align: center;
+    padding-top: 250px;
+    padding-bottom: 50px;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+}
+
+.title {
+
+    padding-bottom: 40px;
+    font-size: 96px;
+    font-weight: 700;
+}
+
+.top__link {
+    background-color: #acaaab;
+    padding: 23px;
+    max-width: 430px;
+    width: 100%;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.swiper-wrapper {
+    background: rgba(21, 21, 21, .7);
+}
+
+.swiper-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom, center;
+    height: 100vh;
+}
+
+.swiper-pagination-bullet {
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 15px;
+}
+
+.swiper-pagination-bullet-active {
+    height: 6px;
+    background-color: white;
+>>>>>>> 43aa58d (Add Slider)
 }

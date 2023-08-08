@@ -1,10 +1,10 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Byblik Wooblik</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,175 +12,393 @@
     <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="wrapper">
-            <header class="header">
-                <div class="container">
-                    <div class="header__inner">
-                        <nav class="menu">
-                            <ul class="menu__list">
-                                <li class="menu__list-item"><a href="#" class="menu__list-link">Главная</a></li>
-                                <li class="menu__list-item"><a href="#" class="menu__list-link">Работы</a></li>
-                                <li class="menu__list-item"><a href="#" class="menu__list-link">Каталог</a></li>
-                                <li class="menu__list-item"><a href="#" class="menu__list-link">Контакты</a></li>
-                            </ul>
-                        </nav>
-                    </div>     
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <nav class="menu">
+                        <button class="menu__btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul class="menu__list">
+                            <li class="menu__list-item"><a href="index.html" class="menu__list-link">Главная</a></li>
+                            <li class="menu__list-item"><a href="works.html" class="menu__list-link">Работы</a></li>
+                            <li class="menu__list-item"><a href="catalog.html"
+                                    class="menu__list-link menu__list-link--active">Каталог</a></li>
+                            <li class="menu__list-item"><a href="contact.html" class="menu__list-link">Контакты</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </header>
-            <main class="main">
+            </div>
+        </header>
+        <main class="main">
 
-            </main>
-            <footer class="footer">
+            <section class="choose">
                 <div class="container">
-                  <nav class="footer__menu">
-                    <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><p href="#" class="footer__menu-title">Основное</p></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Доставка</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Начинки</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Цены</a></li>
-                    </ul>
-                    <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><p href="#" class="footer__menu-title">Внимание</p></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Новости</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Отзывы</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Партнерам</a></li>
-                    </ul>
-                    <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><p href="#" class="footer__menu-title">Полезное</p></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Контакты</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Соглашения и правила</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Акции</a></li>
-                    </ul>
-                  </nav> 
-                  <ul class="mess__links">
-                    <li class="mess__item">
-                        <a href="#" class="mess__item-link">
-                            <img class="mess__item-img" src="/images/tg.png" alt="">
-                        </a>
-                    </li>
-                    <li class="mess__item">
-                        <a href="#" class="mess__item-link">
-                            <img class="mess__item-img" src="/images/wa.png" alt="">
-                        </a>
-                    </li>
-                    <li class="mess__item">
-                        <a href="#" class="mess__item-link">
-                            <img class="mess__item-img" src="/images/vk.png" alt="">
-                        </a>
-                    </li>
-                  </ul>
-                  <div class="footer__copy">
-                    <p class="footer__copy-text">
-                        + 7 (495) 111-11-11
-                      </p>
-                      <p class="footer__copy-text">
-                        Works from .... to ..... seven days on week.
-                      </p>
-                  </div>
-                  <nav class="copy__nav">
-                    <ul class="copy__nav-list">
-                        <p class="copy__nav-item">
-                            Sweet-Shop Byblik-Wooblik © 2023. All rights reserved.
-                        </p>
-                    </ul>
-                  </nav>
+                    <h2 class="section-title">
+                        Choose your Cake
+                    </h2>
+                    <div class="tabs">
+                        <div class="tabs__btn">
+                            <button class="tabs__btn-item tabs__btn-item--active" data-button="content-1">Classic
+                                Cakes</button>
+                            <button class="tabs__btn-item" data-button="content-2">Easter cakes</button>
+                            <button class="tabs__btn-item" data-button="content-3">Trifles</button>
+                            <button class="tabs__btn-item" data-button="content-4">Other sweets</button>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="tabs__content-item tabs__content-item--active" id="content-1">
+                                <div class="card">
+                                    <img src="images/card-1.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Classic Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-2.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Honey Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-3.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Red Velvet Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-4.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Bounty Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-1.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Classic Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-2.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Honey Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-3.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Red Velvet Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-4.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Bounty Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-1.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Classic Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-2.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Honey Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-3.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Red Velvet Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                                <div class="card">
+                                    <img src="images/card-4.jpg" alt="" class="card__img">
+                                    <div class="card__content">
+                                        <h4 class="card__title">Bounty Cake</h4>
+                                        <p class="card__text">starting from ₽ 3000</p>
+                                        <p class="card__price">₽ 1500/kg</p>
+                                    </div>
+                                    <a href="#" class="card__link">see details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs__content-item" id="content-2">
+                            <div class="card">
+                                <img src="images/card-1.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Classic Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-2.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Honey Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-3.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Red Velvet Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-4.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Bounty Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                        </div>
+                        <div class="tabs__content-item" id="content-3">
+                            <div class="card">
+                                <img src="images/card-1.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Classic Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-2.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Honey Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-3.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Red Velvet Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-4.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Bounty Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-1.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Classic Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-2.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Honey Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-3.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Red Velvet Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-4.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Bounty Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                        </div>
+                        <div class="tabs__content-item" id="content-4">
+                            <div class="card">
+                                <img src="images/card-1.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Classic Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-2.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Honey Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-3.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Red Velvet Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                            <div class="card">
+                                <img src="images/card-4.jpg" alt="" class="card__img">
+                                <div class="card__content">
+                                    <h4 class="card__title">Bounty Cake</h4>
+                                    <p class="card__text">starting from ₽ 3000</p>
+                                    <p class="card__price">₽ 1500/kg</p>
+                                </div>
+                                <a href="#" class="card__link">see details</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </footer>
+    </div>
+    </section>
 
-        </div>>
+    <section class="blog">
+        <div class="container">
+            <div class="blog__items">
+                <div class="blod__item">
+                    <img src="images/page3.jpg" alt="" class="blod__item-img">
+                    <h4 class="blod__item-title">Lorem ipsum dolor sit amet.</h4>
+                    <a href="#" class="blod__item-link">more</a>
+                </div>
+                <div class="blod__item">
+                    <img src="images/page4.jpg" alt="" class="blod__item-img">
+                    <h4 class="blod__item-title">Nemon eveniet fugit obcaecati.</h4>
+                    <a href="#" class="blod__item-link">more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <p href="#" class="footer__menu-title">Основное</p>
+                    </li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Доставка</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Начинки</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Цены</a></li>
+                </ul>
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <p href="#" class="footer__menu-title">Внимание</p>
+                    </li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Новости</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Отзывы</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Партнерам</a></li>
+                </ul>
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <p href="#" class="footer__menu-title">Полезное</p>
+                    </li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Контакты</a></li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Соглашения и правила</a>
+                    </li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Акции</a></li>
+                </ul>
+            </nav>
+            <ul class="mess__links">
+                <li class="mess__item">
+                    <a href="#" class="mess__item-link">
+                        <img class="mess__item-img" src="images/tg.png" alt="">
+                    </a>
+                </li>
+                <li class="mess__item">
+                    <a href="#" class="mess__item-link">
+                        <img class="mess__item-img" src="images/wa.png" alt="">
+                    </a>
+                </li>
+                <li class="mess__item">
+                    <a href="#" class="mess__item-link">
+                        <img class="mess__item-img" src="images/vk.png" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__copy">
+                <p class="footer__copy-text">
+                    + 7 (495) 111-11-11
+                </p>
+                <p class="footer__copy-text">
+                    Works from .... to ..... seven days on week.
+                </p>
+            </div>
+            <nav class="copy__nav">
+                <ul class="copy__nav-list">
+                    <p class="copy__nav-item">
+                        Sweet-Shop Byblik-Wooblik © 2023. All rights reserved.
+                    </p>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    </div>
+    <script src="js/main.js"></script>
 </body>
-=======
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Byblik Wooblik</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="wrapper">
-            <header class="header">
-                <div class="container">
-                    <div class="header__inner">
-                        <nav class="menu">
-                            <ul class="menu__list">
-                                <li class="menu__list-item"><a href="#" class="menu__list-link">Главная</a></li>
-                                <li class="menu__list-item"><a href="#" class="menu__list-link">Работы</a></li>
-                                <li class="menu__list-item"><a href="#" class="menu__list-link">Каталог</a></li>
-                                <li class="menu__list-item"><a href="#" class="menu__list-link">Контакты</a></li>
-                            </ul>
-                        </nav>
-                    </div>     
-                </div>
-            </header>
-            <main class="main">
 
-            </main>
-            <footer class="footer">
-                <div class="container">
-                  <nav class="footer__menu">
-                    <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><p href="#" class="footer__menu-title">Основное</p></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Доставка</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Начинки</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Цены</a></li>
-                    </ul>
-                    <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><p href="#" class="footer__menu-title">Внимание</p></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Новости</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Отзывы</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Партнерам</a></li>
-                    </ul>
-                    <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><p href="#" class="footer__menu-title">Полезное</p></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Контакты</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Соглашения и правила</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Акции</a></li>
-                    </ul>
-                  </nav> 
-                  <ul class="mess__links">
-                    <li class="mess__item">
-                        <a href="#" class="mess__item-link">
-                            <img class="mess__item-img" src="/images/tg.png" alt="">
-                        </a>
-                    </li>
-                    <li class="mess__item">
-                        <a href="#" class="mess__item-link">
-                            <img class="mess__item-img" src="/images/wa.png" alt="">
-                        </a>
-                    </li>
-                    <li class="mess__item">
-                        <a href="#" class="mess__item-link">
-                            <img class="mess__item-img" src="/images/vk.png" alt="">
-                        </a>
-                    </li>
-                  </ul>
-                  <div class="footer__copy">
-                    <p class="footer__copy-text">
-                        + 7 (495) 111-11-11
-                      </p>
-                      <p class="footer__copy-text">
-                        Works from .... to ..... seven days on week.
-                      </p>
-                  </div>
-                  <nav class="copy__nav">
-                    <ul class="copy__nav-list">
-                        <p class="copy__nav-item">
-                            Sweet-Shop Byblik-Wooblik © 2023. All rights reserved.
-                        </p>
-                    </ul>
-                  </nav>
-                </div>
-            </footer>
-
-        </div>>
-</body>
->>>>>>> 43aa58d (Add Slider)
 </html>

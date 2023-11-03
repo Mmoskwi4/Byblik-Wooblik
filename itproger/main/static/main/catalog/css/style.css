@@ -1,0 +1,50 @@
+.section-title {
+    margin-bottom: 50px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tabs__content-cake {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(165, 0, 115);
+}
+
+.card__img-cake {
+    display: block;
+    width: 540px;
+    height: 480px;
+    border-right: 1px solid rgb(165, 0, 115);
+}
+
+.card_cake-title {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-left: 15px;
+}
+
+.card__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.card__text-compound,
+.card__text {
+    margin-bottom: 15px;
+    margin-right: 15px;
+    text-align: justify;
+}
+
+.card__text{
+    font-weight: 700;
+}
+
+.card__price {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+}

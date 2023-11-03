@@ -1,0 +1,154 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    BYBLIK WOOBLIK
+{% endblock %}
+
+{% block link_content %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% endblock %}
+
+{% block header_content %}
+    <header class="header header-main">
+        <div class="container">
+            <div class="header__inner">
+                <nav class="menu">
+                    <button class="menu__btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                        <ul class="menu__list">
+                            <li class="menu__list-item"><a href="{% url 'works' %}" class="menu__list-link-main">Работы</a>
+                            </li>
+                            <li class="menu__list-item"><a href="{% url 'catalog' %}" class="menu__list-link-main">Каталог</a>
+                            </li>
+                            <li class="menu__list-item"><a href="{% url 'contact' %}" class="menu__list-link-main">Контакты</a>
+                            </li>
+                            <li class="menu__list-item-acc">
+                                {% if request.user.is_authenticated %}
+                                {% csrf_token %}
+                                    <a href="#" class="menu__list-link-main-acc">{{ request.user.first_name }}, </a>
+                                    <a href="{% url 'logout' %}" class="menu__list-link-main-acc">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'login' %}" class="menu__list-link-main-acc">Log-in</a>
+                                {% endif %}
+                            </li>
+                        </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block main_content %}
+    <section class="top">
+        <div class="container">
+            <h1 class="title">
+                Tasty Cake
+            </h1>
+            <a href="#" class="top__link">
+                Buy Cake
+            </a>
+        </div>
+    </section>
+    <div class="slider">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url({% static 'main/images/swiper/page1.jpg' %});"></div>
+                <div class="swiper-slide" style="background-image: url({% static 'main/images/swiper/page2.jpg' %});"></div>
+                <div class="swiper-slide" style="background-image: url({% static 'main/images/swiper/page3.jpg' %});"></div>
+                <div class="swiper-slide" style="background-image: url({% static 'main/images/swiper/page4.jpg' %});"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <section class="why-cake">
+        <div class="container">
+            <h2 class="section-title">
+                Cake structure
+            </h2>
+            <ul class="why-cake__list">
+                <li class="why-cake__item">
+                    <img class="why-cake__item-img" src="{% static 'main/images/main_block/why-cake-1.svg' %}" alt="">
+                    <h3 class="why-cake__item-title">
+                        Sponge Cake
+                    </h3>
+                    <p class="why-cake__item-text">
+                        Очень нежный, воздушный и практически невесомый! Пышный и простой бисквит для торта.
+                    </p>
+                </li>
+                <li class="why-cake__item">
+                    <img class="why-cake__item-img" src="{% static 'main/images/main_block/why-cake-2.svg' %}" alt="">
+                    <h3 class="why-cake__item-title">
+                        Stuffing in the Cake
+                    </h3>
+                    <p class="why-cake__item-text">
+                        Крем для торта - его вкусовая визитная карточка.
+                    </p>
+                </li>
+                <li class="why-cake__item">
+                    <img class="why-cake__item-img" src="{% static 'main/images/main_block/why-cake-3.svg' %}" alt="">
+                    <h3 class="why-cake__item-title">
+                        Cake Cover
+                    </h3>
+                    <p class="why-cake__item-text">
+                        Желаете придать торту индивидуальности? Тогда пора выбрать чем будем украшать!
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="how-does">
+        <div class="container">
+            <div class="how-does__inner">
+                <h2 class="section-title">
+                    How Does Buying Cake?
+                </h2>
+                <p class="how-does__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit eaque quis veniam.
+                    Repellendus, quisquam placeat vero nesciunt nisi quibusdam laborum dolores labore saepe
+                    provident excepturi, magnam ipsa accusantium tenetur harum.
+                </p>
+                <h4 class="how__does-title">
+                    Choose the flavor of each layer:
+                </h4>
+                <ol class="how__does-list">
+                    <li class="how__does-item">
+                        Нежный сливочный вкус. Пропитанный бисквит или же медовые коржи.
+                    </li>
+                    <li class="how__does-item">
+                        Ягодный, фруктовый?! А может быть Ванильный крем с ягодной.
+                        прослойкой?</li>
+                    <li class="how__does-item">
+                        Декор - это самое важное, выбирать нужно с умом! Поэтому мы Вам
+                        поможем!</li>
+                </ol>
+                <p class="how-does__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit eaque quis veniam.
+                    Repellendus, quisquam placeat vero nesciunt nisi quibusdam laborum dolores labore saepe
+                    provident excepturi, magnam ipsa accusantium tenetur harum.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="video">
+        <div class="container">
+            <h2 class="section-title video__title">
+                WELCOME TO BYBLIK WOOBLIK
+            </h2>
+            <p class="video__text">
+                Watch how we collect your cakes!
+            </p>
+            <iframe class="video__content" width="1000" height="500"
+                    src="https://www.youtube.com/embed/hMOS_7EtHaY?controls=0" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+{% endblock %}

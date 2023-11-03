@@ -1,0 +1,79 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load catalog_tags %}
+
+{% block title %}
+    Каталог
+{% endblock %}
+
+{% block link_content %}
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% endblock %}
+
+{% block header_content %}
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <nav class="menu">
+                        <button class="menu__btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul class="menu__list">
+                            <li class="menu__list-item"><a href="{% url 'home' %}" class="menu__list-link">Главная</a></li>
+                            <li class="menu__list-item"><a href="{% url 'works' %}" class="menu__list-link">Работы</a></li>
+                            <li class="menu__list-item"><a href="{% url 'catalog' %}" class="menu__list-link menu__list-link--active">Каталог</a></li>
+                            <li class="menu__list-item"><a href="{% url 'contact' %}" class="menu__list-link">Контакты</a></li>
+                            <li class="menu__list-item-acc">
+                                {% if request.user.is_authenticated %}
+                                {% csrf_token %}
+                                    <a href="#" class="menu__list-link-main-acc">{{ request.user.first_name }}, </a>
+                                    <a href="{% url 'logout' %}" class="menu__list-link-main-acc">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'login' %}" class="menu__list-link-main-acc">Log-in</a>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+{% endblock %}
+
+{% block main_content %}
+            <section class="choose">
+                <div class="container">
+                    <h2 class="section-title">
+                        Choose your Cake
+                    </h2>
+                    <div class="tabs">
+                        <div class="tabs__btn">
+                            {% draw_category cat_selected %}
+                        </div>
+                    </div>
+                    <div class="tabs__content">
+                        <div class="tabs__content-item tabs__content-item--active">
+                            {% draw_cake cat_selected %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    <section class="blog">
+        <div class="container">
+            <div class="blog__items">
+                <div class="blod__item">
+                    <img src="{% static 'main/images/page3.jpg' %}" alt="" class="blod__item-img">
+                    <h4 class="blod__item-title">Lorem ipsum dolor sit amet.</h4>
+                    <a href="#" class="blod__item-link">more</a>
+                </div>
+                <div class="blod__item">
+                    <img src="{% static 'main/images/page4.jpg' %}" alt="" class="blod__item-img">
+                    <h4 class="blod__item-title">Nemon eveniet fugit obcaecati.</h4>
+                    <a href="#" class="blod__item-link">more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

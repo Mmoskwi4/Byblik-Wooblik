@@ -1,0 +1,8 @@
+{% for cat in category %}
+{% if cat_selected == cat.id %}
+    <a href="{{cat.get_absolut_url}}" class="menu__list-link menu__list-link--active">{{cat.name}}</a>
+{% else %}
+    <a href="{{cat.get_absolut_url}}">{{cat.name}}</a>
+{% endif %}
+{% endfor %}
+

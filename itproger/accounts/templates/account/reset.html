@@ -1,0 +1,40 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Восстановление пароля
+{% endblock %}
+
+{% block link_content %}
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}" xmlns:social="http://www.w3.org/1999/xhtml">
+{% endblock %}
+
+{% block header_content %}
+    <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <ul class="menu__list">
+                        <li class="menu__list-item"><a href="{% url 'home' %}" class="menu__list-link-back">🢦</a></li>
+                    </ul>
+                </div>
+            </div>
+    </header>
+{% endblock %}
+
+{% block main_content %}
+            <section class="contacts">
+                <div class="container">
+                    <h2 class="section-title contacts__title">Reset password</h2>
+                    <p class="contacts__text">
+                        Please, use the following form to reset your password:
+                    </p>
+                    <form method="post" class="form" action=".">
+                        {% csrf_token %}
+                        {% render_field form.username class="form__input" placeholder="Username" %}
+                        {% render_field form.password class="form__input" placeholder="Email" %}
+                        <button class="form__btn" type="submit">Reset your password</button>
+                    </form>
+                </div>
+            </section>
+{% endblock %}

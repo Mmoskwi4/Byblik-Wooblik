@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Выход из аккаунта
+{% endblock %}
+
+{% block link_content %}
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% endblock %}
+
+{% block main_content %}
+            <section class="contacts">
+                <div class="container">
+                    <h2 class="section-title contacts__title"> Logged out</h2>
+                    <p class="contacts__text">
+                        You have been successfully logged out. You can <a href="{% url 'login' %}">log-in again</a>.
+                    </p>
+                </div>
+            </section>
+{% endblock %}

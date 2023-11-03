@@ -1,0 +1,78 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load catalog_tags %}
+
+{% block title %}
+Каталог ({{ cakes.name }})
+{% endblock %}
+
+{% block link_content %}
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'main/catalog/css/style.css' %}">
+
+{% endblock %}
+
+{% block header_content %}
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <nav class="menu">
+                <button class="menu__btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu__list">
+                    <li class="menu__list-item"><a href="{% url 'catalog' %}" class="menu__list-link">&laquo;</a></li>
+                    <li class="menu__list-item"><a href="{% url 'works' %}" class="menu__list-link">Работы</a></li>
+                    <li class="menu__list-item"><a href="{% url 'catalog' %}"
+                            class="menu__list-link menu__list-link--active">Каталог</a></li>
+                    <li class="menu__list-item"><a href="{% url 'contact' %}" class="menu__list-link">Контакты</a></li>
+                    <li class="menu__list-item-acc">
+                        {% if request.user.is_authenticated %}
+                        {% csrf_token %}
+                        <a href="#" class="menu__list-link-main-acc">{{ request.user.first_name }}, </a>
+                        <a href="{% url 'logout' %}" class="menu__list-link-main-acc">Logout</a>
+                        {% else %}
+                        <a href="{% url 'login' %}" class="menu__list-link-main-acc">Log-in</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block main_content %}
+<section class="choose">
+    <div class="container">
+
+            <h2 class="section-title">
+                {{ cakes }}
+            </h2>
+            <div class="tabs__content-cake">
+                <div class="card_cake-img">
+                    <img src="{{ cakes.img.url }}" alt="" class="card__img-cake">
+                </div>
+                <div class="card_cake-title">
+                    <h4 class="card__title">Описание</h4>
+                    <div class="specification-card">
+                        <p class="card__text-compound">
+                            Состав: {{ cake_id.compound }} Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                            cupiditate facere? Expedita consectetur eveniet aspernatur quo laborum quia necessitatibus
+                            doloremque, nisi iure pariatur repellendus error incidunt aut! Deleniti, placeat debitis?
+                        </p>
+                    </div>
+                    <p class="card__text">Бисквит: {{ cakes.basic }}</p>
+                    <p class="card__text">Крем: {{ cakes.cream }}</p>
+                    {% if cake_id.filling is not none %}
+                        <p class="card__text">Начинка: {{ cakes.filling }}</p>
+                    {% endif %}
+                    <p class="card__price">Цена: ₽ {{ cakes.price }}/кг</p>
+                </div>
+            </div>
+
+    </div>
+</section>
+{% endblock %}

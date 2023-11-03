@@ -1,0 +1,18 @@
+{% for cake in cakes %}
+    {% if cat_selected == cake.cat_id %}
+           <div class="card">
+                <img src="{{ cake.img.url }}" alt="" class="card__img">
+                <div class="card__content">
+                <h4 class="card__title">{{ cake.name }}</h4>
+                <p class="card__text">Бисквит: {{ cake.basic }}</p>
+                <p class="card__text">Крем: {{ cake.cream }}</p>
+                {% if cake.filling is not none %}
+                    <p class="card__text">Начинка: {{ cake.filling }}</p>
+                {% endif %}
+                <p class="card__price">Price: ₽ {{ cake.price }}/kg</p>
+                <p class="card__price"></p>
+            </div>
+                <a href="{{ cake.id }}" class="card__link">see details</a>
+            </div>
+    {% endif %}
+{% endfor %}

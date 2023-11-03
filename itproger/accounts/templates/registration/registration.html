@@ -1,0 +1,31 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Регистрация
+{% endblock %}
+
+{% block link_content %}
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% endblock %}
+
+{% block main_content %}
+            <section class="contacts">
+                <div class="container">
+                    <h2 class="section-title contacts__title"> Register</h2>
+                    <p class="contacts__text">
+                        Please, use the following form to register:
+                    </p>
+                    <form method="post" class="form" action=".">
+                        {% csrf_token %}
+                        {% render_field user_form.username class="form__input" placeholder="Username" %}
+                        {% render_field user_form.first_name class="form__input" placeholder="Name" %}
+                        {% render_field user_form.email class="form__input" placeholder="E-mail" %}
+                        {% render_field user_form.password class="form__input" placeholder="Your password" %}
+                        {% render_field user_form.password2 class="form__input" placeholder="Repeat password" %}
+                        <button class="form__btn" type="submit">Create account</button>
+                    </form>
+                </div>
+            </section>
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block link_content %}
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% endblock %}
+
+{% block header_content %}
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <nav class="menu">
+                        <button class="menu__btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul class="menu__list">
+                            <li class="menu__list-item"><a href="{% url 'home' %}" class="menu__list-link">Главная</a></li>
+                            <li class="menu__list-item"><a href="{% url 'works' %}"
+                                    class="menu__list-link menu__list-link--active">Работы</a></li>
+                            <li class="menu__list-item"><a href="{% url 'catalog' %}" class="menu__list-link">Каталог</a></li>
+                            <li class="menu__list-item"><a href="{% url 'contact' %}" class="menu__list-link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+{% endblock %}
+
+{% block main_content %}
+            <section class="history">
+                <h2 class="section-title">
+                    History of orders
+                </h2>
+                {% for comp in work %}
+                    <div class="history-items">
+                        <div class="history-card">
+                            <div class="history-item">
+                                <img src="{{ comp.img.url }}" alt="" class="history__img">
+                                <h4 class="history__title">{{ comp.name }}</h4>
+                                <p class="history__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                                    explicabo incidunt quas voluptates maxime vero dicta rem amet nemo, necessitatibus
+                                    praesentium sit consectetur saepe, officia, nobis earum cum sint et!</p>
+                                <p class="history__price">₽ {{ camp.price }} (weight)</p>
+                            </div>
+                        </div>
+                        <div class="history-card">
+                            <div class="history-item">
+                                <img src="{% static 'main/images/card-3.jpg' %}" alt="" class="history__img">
+                                <h4 class="history__title">Cake of Red Alert</h4>
+                                <p class="history__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                                    explicabo incidunt quas voluptates maxime vero dicta rem amet nemo, necessitatibus
+                                    praesentium sit consectetur saepe, officia, nobis earum cum sint et!</p>
+                                <p class="history__price">₽ 1500 (weight)</p>
+                            </div>
+                        </div>
+                        <div class="history-card">
+                            <div class="history-item">
+                                <img src="{% static 'main/images/card-4.jpg' %}" alt="" class="history__img">
+                                <h4 class="history__title">Cake of Red Alert</h4>
+                                <p class="history__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                                    explicabo incidunt quas voluptates maxime vero dicta rem amet nemo, necessitatibus
+                                    praesentium sit consectetur saepe, officia, nobis earum cum sint et!</p>
+                                <p class="history__price">₽ 1500 (weight)</p>
+                            </div>
+                        </div>
+                        <div class="history-card">
+                            <div class="history-item">
+                                <img src="{% static 'main/images/card-2.jpg' %}" alt="" class="history__img">
+                                <h4 class="history__title">Cake of Red Alert</h4>
+                                <p class="history__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                                    explicabo incidunt quas voluptates maxime vero dicta rem amet nemo, necessitatibus
+                                    praesentium sit consectetur saepe, officia, nobis earum cum sint et!</p>
+                                <p class="history__price">₽ 1500 (weight)</p>
+                            </div>
+                        </div>
+                        <div class="history-card">
+                            <div class="history-item">
+                                <img src="{% static 'main/images/card-4.jpg' %}" alt="" class="history__img">
+                                <h4 class="history__title">Cake of Red Alert</h4>
+                                <p class="history__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                                    explicabo incidunt quas voluptates maxime vero dicta rem amet nemo, necessitatibus
+                                    praesentium sit consectetur saepe, officia, nobis earum cum sint et!</p>
+                                <p class="history__price">₽ 1500 (weight)</p>
+                            </div>
+                        </div>
+                        <div class="history-card">
+                            <div class="history-item">
+                                <img src="{% static 'main/images/card-2.jpg' %}" alt="" class="history__img">
+                                <h4 class="history__title">Cake of Red Alert</h4>
+                                <p class="history__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                                    explicabo incidunt quas voluptates maxime vero dicta rem amet nemo, necessitatibus
+                                    praesentium sit consectetur saepe, officia, nobis earum cum sint et!</p>
+                                <p class="history__price">₽ 1500 (weight)</p>
+                            </div>
+                        </div>
+                        <div class="history-card">
+                            <div class="history-item">
+                                <img src="{% static 'main/images/card-1.jpg' %}" alt="" class="history__img">
+                                <h4 class="history__title">Cake of Red Alert</h4>
+                                <p class="history__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                                    explicabo incidunt quas voluptates maxime vero dicta rem amet nemo, necessitatibus
+                                    praesentium sit consectetur saepe, officia, nobis earum cum sint et!</p>
+                                <p class="history__price">₽ 1500 (weight)</p>
+                            </div>
+                        </div>
+                        <div class="history-card">
+                            <div class="history-item">
+                                <img src="{% static 'main/images/card-3.jpg' %}" alt="" class="history__img">
+                                <h4 class="history__title">Cake of Red Alert</h4>
+                                <p class="history__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                                    explicabo incidunt quas voluptates maxime vero dicta rem amet nemo, necessitatibus
+                                    praesentium sit consectetur saepe, officia, nobis earum cum sint et!</p>
+                                <p class="history__price">₽ 1500 (weight)</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </section>
+{% endblock %}

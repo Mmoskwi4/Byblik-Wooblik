@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Регистрация
+{% endblock %}
+
+{% block link_content %}
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% endblock %}
+
+{% block main_content %}
+            <section class="contacts">
+                <div class="container">
+                    <h2 class="section-title contacts__title"> Register</h2>
+                    <p class="contacts__text">
+                        Your account has been successfully registered, you can return to
+                        <a href="{% url 'home' %}">home</a>
+                    </p>
+
+                </div>
+            </section>
+{% endblock %}

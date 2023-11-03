@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Контакты
+{% endblock %}
+
+{% block link_content %}
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% endblock %}
+
+{% block main_content %}
+            <section class="contacts">
+                <div class="container">
+                    <h2 class="section-title contacts__title"> We sent your message</h2>
+                    <p class="contacts__text">
+                        You can send another in the
+                        <a href="{% url 'home' %}">Главная</a>
+                    </p>
+            </section>
+{% endblock %}

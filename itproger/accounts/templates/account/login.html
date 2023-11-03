@@ -1,0 +1,33 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Авторизация в аккаунт
+{% endblock %}
+
+{% block link_content %}
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}" xmlns:social="http://www.w3.org/1999/xhtml">
+{% endblock %}
+
+{% block main_content %}
+            <section class="contacts">
+                <div class="container">
+                    <h2 class="section-title contacts__title"> Log-in</h2>
+                    <p class="contacts__text">
+                        Please, use the following form to log-in:
+                    </p>
+                    <form method="post" class="form" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        {% render_field form.username class="form__input" placeholder="Username" %}
+                        {% render_field form.password class="form__input" placeholder="Your password" %}
+                        <button class="form__btn" type="submit">Log-in</button>
+                        <a href="{% url 'register' %}" class="form__link-login">Create account</a>
+                        <a href="{% url 'password_reset' %}" class="form__link-login">Reset password</a>
+                        <a href="{% url 'social:begin' backend='google-oauth2' %}">
+                            <img class="img_btn_login" src="{% static 'main/images/login/google.svg' %}" alt="">
+                        </a>
+                    </form>
+                </div>
+            </section>
+{% endblock %}
